@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/table.html' import render_table %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Cafes</h1>
+
+      {{ render_table(data=cafes[1:],titles=cafes[0],table_classes="table table-dark table-striped table-hover") }}
+
+      <p><a href="{{ url_for('home') }}">Return to index page</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
